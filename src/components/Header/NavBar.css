@@ -1,0 +1,12 @@
+.nav-links a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 2px;
+
+}
+
+.active {
+    background-color: tomato;
+}
