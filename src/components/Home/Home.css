@@ -1,0 +1,14 @@
+.home {
+    padding: 50px 0;
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+@media only screen and (max-width : 600px) {
+    .home {
+        grid-template-columns: 1fr;
+    }
+}

@@ -14,9 +14,9 @@ export default function NavigationBar() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <NavLink className={({ isActive }) => isActive ? 'active' : null} to="/">Home</NavLink>
-                            <NavLink to="/statistics">Statistics</NavLink>
-                            <NavLink to="/blogs">Blogs</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/home">Home</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/statistics">Statistics</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/blogs">Blogs</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </div>
