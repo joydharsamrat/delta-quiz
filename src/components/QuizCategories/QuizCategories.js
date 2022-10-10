@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './QuizCategories.css';
@@ -14,7 +13,7 @@ const QuizCategories = ({ quiz }) => {
                 <h2 className='category-name'>{name}</h2>
                 <p className='fs-5'>{total} questions</p>
             </div>
-            <Link className='start-btn' to={`/quiz/${id}`}>Start Practice</Link>
+            <Link className='start-btn' to={`/quiz/${id}`}>Start Practice <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></Link>
         </div >
     );
 };
