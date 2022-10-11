@@ -44,23 +44,26 @@ const QuizOptions = ({ quiz }) => {
 
 
     return (
-        <div className='m-5 border border-secondary rounded p-2 text-center position-relative'>
-            <FontAwesomeIcon onClick={correctAns} className='correct-ans-btn border-0' icon={faEye}></FontAwesomeIcon>
+        <div>
+            {/* <h1>Quiz Of {name}</h1> */}
+            <div className='m-5 border border-secondary rounded p-2 text-center position-relative'>
+                <FontAwesomeIcon onClick={correctAns} className='correct-ans-btn border-0' icon={faEye}></FontAwesomeIcon>
 
-            <h3 className='my-3 mx-auto w-75 '>Question : {question}</h3>
-            <hr className='w-75 mx-auto' />
-            <div className='options-container'>
-                {
-                    options.map((option, idx) => <p
-                        key={idx}
-                        onClick={() => notify(option)}
-                        className='border p-3 rounded fs-5'>
-                        <label htmlFor={question.id}>
-                            <input type="radio" name="option" id={question.id} />{option}
-                        </label></p>)
-                }
+                <h3 className='my-3 mx-auto w-75 '>Question : {question}</h3>
+                <hr className='w-75 mx-auto' />
+                <div className='options-container'>
+                    {
+                        options.map((option, idx) => <p
+                            key={idx}
+                            onClick={() => notify(option)}
+                            className='border p-3 rounded fs-5 options-ans-container'>
+                            <label htmlFor={question.id}>
+                                <input type="radio" name="option" id={question.id} />{option}
+                            </label></p>)
+                    }
+                </div>
+                <ToastContainer></ToastContainer>
             </div>
-            <ToastContainer></ToastContainer>
         </div>
     );
 };

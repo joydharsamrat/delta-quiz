@@ -8,6 +8,10 @@
     border-radius: 10px;
 }
 
+.options-ans-container:hover {
+    background-color: rgb(75, 85, 95);
+}
+
 .correct-ans-btn {
     position: absolute;
     top: 10px;
