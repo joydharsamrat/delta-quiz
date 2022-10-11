@@ -13,7 +13,7 @@ const QuizOptions = ({ quiz }) => {
     const correctAns = () => toast(`${correctAnswer}`, {
         position: "top-center",
         autoClose: 5000,
-        hideProgressBar: false,
+        hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
@@ -22,6 +22,7 @@ const QuizOptions = ({ quiz }) => {
     })
 
     const notify = (answer) => {
+
         let selectedAns = '';
         if (answer === correctAnswer) {
             selectedAns = 'Well-done. Your Answer Is correct';
@@ -29,16 +30,18 @@ const QuizOptions = ({ quiz }) => {
         else {
             selectedAns = 'sorry ! Your Answer Is Incorrect';
         }
+
         toast(`${selectedAns}`, {
             position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
+            autoClose: 3000,
+            hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
             theme: "light",
         })
+
 
     }
 
@@ -48,18 +51,18 @@ const QuizOptions = ({ quiz }) => {
         <div>
 
             <div className='m-5 border border-secondary rounded p-2 text-center position-relative'>
-                <FontAwesomeIcon onClick={correctAns} className='correct-ans-btn border-0' icon={faEye}></FontAwesomeIcon>
+                <FontAwesomeIcon onClick={correctAns} className='correct-ans-btn border-0' title='Click To See Correct Answer' icon={faEye}></FontAwesomeIcon>
 
                 <h3 className='my-3 mx-auto w-75 '>Question : {question}</h3>
                 <hr className='w-75 mx-auto' />
-                <div className='options-container'>
+                <div className='options-container' >
                     {
                         options.map((option, idx) => <p
                             key={idx}
-                            onClick={() => notify(option)}
-                            className='border p-3 rounded fs-5 options-ans-container'>
+                            className='border p-3 rounded fs-5 options-ans-container'
+                        >
                             <label htmlFor={question.id}>
-                                <input type="radio" name="option" id={question.id} />{option}
+                                <input onClick={() => notify(option)} type="radio" name="option" id={question.id} /> {option}
                             </label></p>)
                     }
                 </div>

@@ -4,10 +4,11 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './QuizCategories.css';
 import { Link } from 'react-router-dom';
 
+
 const QuizCategories = ({ quiz }) => {
     const { id, name, logo, total } = quiz;
     return (
-        <div className='catagories-container'>
+        <div className='catagories-container' id='categories'>
             <img src={logo} alt="" />
             <div className="info">
                 <h2 className='category-name'>{name}</h2>
