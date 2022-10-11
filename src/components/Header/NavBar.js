@@ -16,7 +16,7 @@ export default function NavigationBar() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/home">Home</NavLink>
-                            <HashLink to='#categories'>Categories</HashLink>
+                            <HashLink to='/home#categories'>Categories</HashLink>
                             <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/statistics">Statistics</NavLink>
                             <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to="/blogs">Blogs</NavLink>
                         </Nav>

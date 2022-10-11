@@ -14,7 +14,7 @@ const QuizCategories = ({ quiz }) => {
                 <h2 className='category-name'>{name}</h2>
                 <p className='fs-5'>{total} questions</p>
             </div>
-            <Link className='start-btn' to={`/quiz/${id}`}>Start Practice <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></Link>
+            <Link className='start-btn btn btn-light w-100' to={`/quiz/${id}`}>Start Practice <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></Link>
         </div >
     );
 };
