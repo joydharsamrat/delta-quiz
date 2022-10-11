@@ -7,10 +7,18 @@ const Home = () => {
     const quizzes = useLoaderData();
 
     return (
-        <div className='home'>
-            {
-                quizzes.data.map(quiz => <QuizCategories key={quiz.id} quiz={quiz}></QuizCategories>)
-            }
+        <div >
+
+            <div className='top-banner'>
+                <h1>Unlocking knowledge</h1>
+                <h1> at the speed of thought</h1>
+            </div >
+
+            <div className='home' >
+                {
+                    quizzes.data.map(quiz => <QuizCategories key={quiz.id} quiz={quiz}></QuizCategories>)
+                }
+            </div>
         </div>
     );
 };
