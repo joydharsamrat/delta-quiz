@@ -5,6 +5,7 @@ import './QuizOptions.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const QuizOptions = ({ quiz }) => {
 
     const { question, options, correctAnswer } = quiz;
@@ -45,7 +46,7 @@ const QuizOptions = ({ quiz }) => {
 
     return (
         <div>
-            {/* <h1>Quiz Of {name}</h1> */}
+
             <div className='m-5 border border-secondary rounded p-2 text-center position-relative'>
                 <FontAwesomeIcon onClick={correctAns} className='correct-ans-btn border-0' icon={faEye}></FontAwesomeIcon>
 
@@ -64,6 +65,8 @@ const QuizOptions = ({ quiz }) => {
                 </div>
                 <ToastContainer></ToastContainer>
             </div>
+
+
         </div>
     );
 };
